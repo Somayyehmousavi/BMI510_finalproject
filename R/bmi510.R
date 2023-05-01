@@ -13,7 +13,7 @@ rando = function(x,n=1,replace=T) {
     sample_n(x, n, replace)
   # # If neither of the above conditions are met, throw an error message  
   } else {
-    stop("x must be either an atomic vector or a data frame.")
+    stop("x must be an atomic vector or a data frame.")
   }
 }
   
