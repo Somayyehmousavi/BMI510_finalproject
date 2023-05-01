@@ -66,10 +66,10 @@ library(purrr)
 
 df_scale = function(x, center = T, scale = T) {
   # Find numeric variables
-  numeric_vars <- x %>% select_if(is.numeric) %>% names()
+  numericvars <- x %>% select_if(is.numeric) %>% names()
   
   # Apply scaling
-  scaled_data <- x %>% mutate(across(all_of(numeric_vars), ~ scale(., center = center, scale = scale)))
+  scaled_data <- x %>% mutate(across(all_of(numericvars), ~ scale(., center = center, scale = scale)))
   
   # Return scaled data
   return(as_tibble(scaled_data))
