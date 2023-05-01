@@ -72,11 +72,11 @@ df_scale = function(x, center = T, scale = T) {
   scaled_data <- x %>% mutate(across(all_of(numeric_vars), ~ scale(., center = center, scale = scale)))
   
   # Preserve variable attributes
-  attr_list <- x %>% select(all_of(numeric_vars)) %>% map(attributes)
-  names(attr_list) <- numeric_vars
-  for (i in seq_along(attr_list)) {
-    attributes(scaled_data[[i]]) <- attr_list[[i]]
-  }
+  #attr_list <- x %>% select(all_of(numeric_vars)) %>% map(attributes)
+  #names(attr_list) <- numeric_vars
+  #for (i in seq_along(attr_list)) {
+  #  attributes(scaled_data[[i]]) <- attr_list[[i]]
+  #}
   
   # Return scaled data
   return(as_tibble(scaled_data))
