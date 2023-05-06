@@ -4,9 +4,9 @@
 #' and then returns either n samples or n rows as appropriate.
 #'
 #' This function checks whether the input `x` is an atomic vector or a
-#' data frame-like object (data frame, matrix, or list) and returns either
+#' data frame-like object and returns either
 #' `n` samples or `n` rows accordingly. If the input does not match any of these
-#' types, an error message will be shown.
+#' types, an message will be shown.
 #'
 #' @param x An atomic vector or data frame-like object
 #' @param n The number of samples or rows to return
@@ -28,7 +28,7 @@ rando = function(x,n=1,replace=T) {
     # Check if "x" is a data frame
   } else if (is.data.frame(x)) {
     sample_n(x, n, replace)
-    # # If neither of the above conditions are met, throw an error message
+    # If neither of the above conditions are met, throw an error message
   } else {
     stop("x must be either an atomic vector or a data frame.")
   }
@@ -65,13 +65,13 @@ is_min = function(x,na.rm=T) {
 #' to TRUE, removes any NA values from the input vector before finding the maximum value.
 #'
 #' @param x An atomic vector to be checked for its maximum value
-#' @param na.rm A logical value indicating whether to remove NA values before finding the maximum. Default is TRUE.
+#' @param na.rm A logical value indicating whether to remove NA values before finding the maximum.
 #'
 #' @return A logical vector with TRUE values indicating where the maximum value of "x" is found.
 #' @export
 #'
 #' @examples
-#' is_max(c(1, 2, 3, 1, 4, 1))
+#' is_max(c(11, 21, 31, 22, 42, 11))
 #' is_max(c(NA, 2, 3, NA, 4, NA), na.rm = TRUE)
 #'
 is_max = function(x,na.rm=T) {
@@ -138,7 +138,7 @@ rep_mat = function(x, M=1, N=1) {
 #' library(tibble)
 #'
 #' # Create a tibble
-#' x <- tibble(a = 1:5, b = c("foot", "bar", "bazar", "math", "quux"), c = as.Date("2023-01-01") + 0:4)
+#' x <- tibble(a = 1:5, b = c("foot", "bar", "bazar", "math", "queen"), c = as.Date("2023-01-01") + 0:4)
 #'
 #' # Get the classes of each variable
 #' classes(x)
@@ -311,15 +311,15 @@ log_likelihood_t = function(x, df) {
 }
 
 #### 12.sensitivity ####
-#' Calculates the sensitivity (true positive rate) of binary classification model predictions.
+#' Calculates the sensitivity (true positive rate (TPR)) of binary classification model predictions.
 #'
 #' This function accepts two vectors: the predicted labels `pred` (0 or 1) and the true
-#' labels `truth` (0 or 1) of a binary classification model, and calculates the sensitivity (true positive rate).
+#' labels `truth` (0 or 1) of a binary classification model, and calculates the sensitivity (TPR).
 #'
 #' @param pred A vector of predicted labels (0 or 1)
 #' @param truth A vector of true labels (0 or 1)
 #'
-#' @return The sensitivity (true positive rate) of the binary classification model predictions.
+#' @return The sensitivity (TPR) of the binary classification model predictions.
 #'
 #' @examples
 #' pred <- c(0, 1, 1, 0, 1)
@@ -338,15 +338,15 @@ sensitivity = function(pred, truth) {
 }
 
 ### 13. specificity ###
-#' Calculates the specificity (true negative rate) of binary classification model predictions.
+#' Calculates the specificity (true negative rate (TNR)) of binary classification model predictions.
 #'
 #' This function accepts two vectors: the predicted labels `pred` (0 or 1) and the true
-#' labels `truth` (0 or 1) of a binary classification model, and calculates the specificity (true negative rate).
+#' labels `truth` (0 or 1) of a binary classification model, and calculates the specificity (TNR).
 #'
 #' @param pred A vector of predicted labels (0 or 1)
 #' @param truth A vector of true labels (0 or 1)
 #'
-#' @return The specificity (true negative rate) of the binary classification model predictions.
+#' @return The specificity (TNR) of the binary classification model predictions.
 #'
 #' @examples
 #' pred <- c(0, 1, 1, 0, 1)
@@ -392,15 +392,15 @@ precision = function(pred,truth) {
 }
 
 ### 15.recall ###
-#' Calculates the recall (true positive rate) of binary classification model predictions.
+#' Calculates the recall (true positive rate (TPR)) of binary classification model predictions.
 #'
 #' This function accepts two vectors: the predicted labels `pred` (0 or 1) and the true
-#' labels `truth` (0 or 1) of a binary classification model, and calculates the recall (true positive rate).
+#' labels `truth` (0 or 1) of a binary classification model, and calculates the recall (TPR).
 #'
 #' @param pred A vector of predicted labels (0 or 1)
 #' @param truth A vector of true labels (0 or 1)
 #'
-#' @return The recall (true positive rate) of the binary classification model predictions.
+#' @return The recall (TPR) of the binary classification model predictions.
 #'
 #' @examples
 #' pred <- c(0, 1, 1, 0, 1)
