@@ -19,9 +19,9 @@ A vector or data frame-like object containing the sampled elements or rows.
 }
 \description{
 This function checks whether the input `x` is an atomic vector or a
-data frame-like object (data frame, matrix, or list) and returns either
+data frame-like object and returns either
 `n` samples or `n` rows accordingly. If the input does not match any of these
-types, an error message will be shown.
+types, an message will be shown.
 }
 \examples{
 # sample from an atomic vector

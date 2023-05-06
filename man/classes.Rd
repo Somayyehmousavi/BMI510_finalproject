@@ -22,7 +22,7 @@ it returns the variable classes.
 library(tibble)
 
 # Create a tibble
-x <- tibble(a = 1:5, b = c("foot", "bar", "bazar", "math", "quux"), c = as.Date("2023-01-01") + 0:4)
+x <- tibble(a = 1:5, b = c("foot", "bar", "bazar", "math", "queen"), c = as.Date("2023-01-01") + 0:4)
 
 # Get the classes of each variable
 classes(x)

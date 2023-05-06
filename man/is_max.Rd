@@ -9,7 +9,7 @@ is_max(x, na.rm = T)
 \arguments{
 \item{x}{An atomic vector to be checked for its maximum value}
 
-\item{na.rm}{A logical value indicating whether to remove NA values before finding the maximum. Default is TRUE.}
+\item{na.rm}{A logical value indicating whether to remove NA values before finding the maximum.}
 }
 \value{
 A logical vector with TRUE values indicating where the maximum value of "x" is found.
@@ -20,7 +20,7 @@ where the maximum value of "x" is found. The function also includes an optional 
 to TRUE, removes any NA values from the input vector before finding the maximum value.
 }
 \examples{
-is_max(c(1, 2, 3, 1, 4, 1))
+is_max(c(11, 21, 31, 22, 42, 11))
 is_max(c(NA, 2, 3, NA, 4, NA), na.rm = TRUE)
 
 }

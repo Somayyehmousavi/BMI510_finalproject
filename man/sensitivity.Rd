@@ -2,7 +2,7 @@
 % Please edit documentation in R/bmi510.R
 \name{sensitivity}
 \alias{sensitivity}
-\title{Calculates the sensitivity (true positive rate) of binary classification model predictions.}
+\title{Calculates the sensitivity (true positive rate (TPR)) of binary classification model predictions.}
 \usage{
 sensitivity(pred, truth)
 }
@@ -12,11 +12,11 @@ sensitivity(pred, truth)
 \item{truth}{A vector of true labels (0 or 1)}
 }
 \value{
-The sensitivity (true positive rate) of the binary classification model predictions.
+The sensitivity (TPR) of the binary classification model predictions.
 }
 \description{
 This function accepts two vectors: the predicted labels `pred` (0 or 1) and the true
-labels `truth` (0 or 1) of a binary classification model, and calculates the sensitivity (true positive rate).
+labels `truth` (0 or 1) of a binary classification model, and calculates the sensitivity (TPR).
 }
 \examples{
 pred <- c(0, 1, 1, 0, 1)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/bmi510.R
 \name{recall}
 \alias{recall}
-\title{Calculates the recall (true positive rate) of binary classification model predictions.}
+\title{Calculates the recall (true positive rate (TPR)) of binary classification model predictions.}
 \usage{
 recall(pred, truth)
 }
@@ -12,11 +12,11 @@ recall(pred, truth)
 \item{truth}{A vector of true labels (0 or 1)}
 }
 \value{
-The recall (true positive rate) of the binary classification model predictions.
+The recall (TPR) of the binary classification model predictions.
 }
 \description{
 This function accepts two vectors: the predicted labels `pred` (0 or 1) and the true
-labels `truth` (0 or 1) of a binary classification model, and calculates the recall (true positive rate).
+labels `truth` (0 or 1) of a binary classification model, and calculates the recall (TPR).
 }
 \examples{
 pred <- c(0, 1, 1, 0, 1)
